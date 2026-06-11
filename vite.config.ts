@@ -13,9 +13,8 @@ export default defineConfig({
     server: { entry: "server" },
   },
   nitro: {
-    // Explicitly use Node preset for Vercel
-    preset: "node-server",
-    outputDir: ".output",
+    // Use Vercel preset for automatic Vercel deployment
+    preset: "vercel",
     prerender: {
       crawlLinks: true,
       routes: ["/sitemap.xml", "/robots.txt"],

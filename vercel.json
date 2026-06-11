@@ -1,17 +1,11 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".output/public",
+  "outputDirectory": ".vercel/output",
   "devCommand": "npm run dev",
   "env": {
     "NODE_ENV": "production"
   },
   "installCommand": "npm install",
   "framework": "other",
-  "nodeVersion": "20.x",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/index.mjs"
-    }
-  ]
+  "nodeVersion": "20.x"
 }
