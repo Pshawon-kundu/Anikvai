@@ -5,6 +5,5 @@
     "NODE_ENV": "production"
   },
   "installCommand": "npm install",
-  "framework": "other",
-  "nodeVersion": "22.x"
+  "framework": "other"
 }

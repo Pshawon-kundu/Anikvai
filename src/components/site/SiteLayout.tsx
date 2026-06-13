@@ -19,7 +19,13 @@ export function SiteLayout({
   );
 }
 
-export function PageHeader({ title, subtitle }: { title: string; subtitle?: string }) {
+export function PageHeader({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle?: string;
+}) {
   return (
     <section className="border-b border-border py-20 text-center md:py-28">
       <div className="mx-auto max-w-3xl px-5">

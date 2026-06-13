@@ -40,14 +40,21 @@ export function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-transparent"
+        scrolled
+          ? "bg-background/90 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:grid md:grid-cols-[1fr_auto_1fr]">
         {/* Left nav */}
         <nav className="hidden items-center gap-8 md:flex">
           {leftLinks.map((l) => (
-            <Link key={l.to} to={l.to} className={navLinkClass} activeProps={{ className: "text-gold" }}>
+            <Link
+              key={l.to}
+              to={l.to}
+              className={navLinkClass}
+              activeProps={{ className: "text-gold" }}
+            >
               {l.label}
             </Link>
           ))}
@@ -55,7 +62,9 @@ export function Header() {
 
         {/* Center logo */}
         <Link to="/" className="flex flex-col items-center text-center md:px-8">
-          <span className="font-heading text-xl tracking-[0.3em] text-gold">ANIK</span>
+          <span className="font-heading text-xl tracking-[0.3em] text-gold">
+            ANIK
+          </span>
           <span className="mt-0.5 hidden text-[0.6rem] uppercase tracking-[0.3em] text-muted-foreground sm:block">
             Anisur Rahman Khandoker
           </span>
@@ -64,7 +73,12 @@ export function Header() {
         {/* Right nav */}
         <nav className="hidden items-center justify-end gap-8 md:flex">
           {rightLinks.map((l) => (
-            <Link key={l.to} to={l.to} className={navLinkClass} activeProps={{ className: "text-gold" }}>
+            <Link
+              key={l.to}
+              to={l.to}
+              className={navLinkClass}
+              activeProps={{ className: "text-gold" }}
+            >
               {l.label}
             </Link>
           ))}
@@ -84,8 +98,14 @@ export function Header() {
       {open && (
         <div className="fixed inset-0 z-50 flex flex-col bg-background/98 backdrop-blur-lg md:hidden">
           <div className="flex h-20 items-center justify-between px-5">
-            <span className="font-heading text-xl tracking-[0.3em] text-gold">ANIK</span>
-            <button aria-label="Close menu" onClick={() => setOpen(false)} className="text-foreground">
+            <span className="font-heading text-xl tracking-[0.3em] text-gold">
+              ANIK
+            </span>
+            <button
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              className="text-foreground"
+            >
               <X className="h-6 w-6" />
             </button>
           </div>

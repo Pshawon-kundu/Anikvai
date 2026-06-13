@@ -12,7 +12,7 @@ build/
 .env.*.local
 .anik/
 
-# Lock files (Vercel handles npm install)
+# Alternate lock files (Vercel uses npm via vercel.json)
 bun.lock
 pnpm-lock.yaml
 yarn.lock

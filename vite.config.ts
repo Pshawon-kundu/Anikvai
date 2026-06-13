@@ -17,7 +17,7 @@ export default defineConfig({
     preset: "vercel",
     prerender: {
       crawlLinks: true,
-      routes: ["/sitemap.xml", "/robots.txt"],
+      routes: ["/robots.txt"],
     },
   },
 });

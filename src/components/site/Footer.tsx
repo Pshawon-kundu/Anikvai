@@ -13,10 +13,16 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-popover py-14 text-center">
       <div className="mx-auto max-w-5xl px-5">
-        <p className="font-heading text-2xl tracking-[0.25em] text-gold">ANIK</p>
-        <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">{FULL_NAME}</p>
+        <p className="font-heading text-2xl tracking-[0.25em] text-gold">
+          ANIK
+        </p>
+        <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          {FULL_NAME}
+        </p>
 
-        <p className="mt-10 text-xs uppercase tracking-[0.3em] text-gold">Follow</p>
+        <p className="mt-10 text-xs uppercase tracking-[0.3em] text-gold">
+          Follow
+        </p>
         <div className="mt-4 flex items-center justify-center gap-5">
           {socials.map(({ label, href, Icon }) => (
             <a
