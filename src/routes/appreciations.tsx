@@ -5,7 +5,7 @@ import { appreciations } from "@/lib/site-data";
 export const Route = createFileRoute("/appreciations")({
   head: () => ({
     meta: [
-      { title: "Appreciations — Anisur Rahman Khandoker Anik" },
+      { title: "Appreciations - Anisur Rahman Khandoker Anik" },
       {
         name: "description",
         content:
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/appreciations")({
       },
       {
         property: "og:title",
-        content: "Appreciations — Anisur Rahman Khandoker Anik",
+        content: "Appreciations - Anisur Rahman Khandoker Anik",
       },
       {
         property: "og:description",
@@ -45,7 +45,7 @@ function AppreciationsPage() {
                   width={1024}
                   height={768}
                   loading="lazy"
-                  className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="aspect-4/5 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-5">

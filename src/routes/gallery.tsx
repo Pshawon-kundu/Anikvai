@@ -5,7 +5,7 @@ import { gallery } from "@/lib/site-data";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Anisur Rahman Khandoker Anik" },
+      { title: "Gallery - Anisur Rahman Khandoker Anik" },
       {
         name: "description",
         content:
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/gallery")({
       },
       {
         property: "og:title",
-        content: "Gallery — Anisur Rahman Khandoker Anik",
+        content: "Gallery - Anisur Rahman Khandoker Anik",
       },
       {
         property: "og:description",
@@ -44,7 +44,7 @@ function GalleryPage() {
                 width={1024}
                 height={768}
                 loading="lazy"
-                className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="aspect-4/5 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110 sm:aspect-video"
               />
               <div className="absolute inset-0 flex items-end bg-gradient-to-t from-background/90 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100">
                 <h2 className="font-heading text-xl text-foreground">

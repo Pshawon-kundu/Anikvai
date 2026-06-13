@@ -5,14 +5,14 @@ import { featuredAwards, otherAwards } from "@/lib/site-data";
 export const Route = createFileRoute("/awards")({
   head: () => ({
     meta: [
-      { title: "Awards — Anisur Rahman Khandoker Anik" },
+      { title: "Awards - Anisur Rahman Khandoker Anik" },
       {
         name: "description",
         content: "Awards and honours received by Anisur Rahman Khandoker Anik.",
       },
       {
         property: "og:title",
-        content: "Awards — Anisur Rahman Khandoker Anik",
+        content: "Awards - Anisur Rahman Khandoker Anik",
       },
       { property: "og:description", content: "Awards and honours." },
     ],
@@ -40,7 +40,7 @@ function AwardsPage() {
                 width={1024}
                 height={768}
                 loading="lazy"
-                className="h-64 w-full object-cover"
+                className="aspect-4/5 w-full object-cover object-top"
               />
               <div className="p-6">
                 <h2 className="font-heading text-2xl text-gold">{a.title}</h2>
@@ -63,7 +63,7 @@ function AwardsPage() {
                 className="flex items-center justify-between gap-4 py-4 text-foreground/90 transition-colors hover:text-gold"
               >
                 <span className="flex items-center gap-3">
-                  <span className="text-gold">◆</span>
+                  <span className="text-gold">*</span>
                   {a.title}
                 </span>
                 <span className="text-sm text-muted-foreground">{a.year}</span>

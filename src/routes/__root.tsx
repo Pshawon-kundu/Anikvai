@@ -85,14 +85,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         {
           name: "description",
           content:
-            "Official profile of Anisur Rahman Khandoker Anik — leader, philanthropist and community builder.",
+            "Official political portfolio of Anisur Rahman Khandoker Anik, focused on youth empowerment, education and democratic values.",
         },
         { name: "author", content: "Anisur Rahman Khandoker Anik" },
         { property: "og:title", content: "Anisur Rahman Khandoker Anik" },
         {
           property: "og:description",
-          content:
-            "Official profile of Anisur Rahman Khandoker Anik — leader, philanthropist and community builder.",
+          content: "Leadership through service for a stronger Bangladesh.",
         },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary" },
@@ -107,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+Bengali:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap",
         },
         {
           rel: "stylesheet",
@@ -124,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="bn">
       <head>
         <HeadContent />
       </head>

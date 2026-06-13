@@ -1,57 +1,81 @@
-import { useEffect, useState } from "react";
-import { heroSlides } from "@/lib/site-data";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import heroPortrait from "@/assests/ak8.jpeg";
 
 export function Hero() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setActive((a) => (a + 1) % heroSlides.length);
-    }, 5000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {heroSlides.map((slide, i) => (
-        <div
-          key={i}
-          className="absolute inset-0 transition-opacity duration-1000"
-          style={{ opacity: i === active ? 1 : 0 }}
-          aria-hidden={i !== active}
-        >
-          <img
-            src={slide.image}
-            alt={slide.subtitle}
-            width={1920}
-            height={1280}
-            className="h-full w-full object-cover"
-            loading={i === 0 ? "eager" : "lazy"}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/30" />
+    <section className="campaign-pattern relative min-h-screen overflow-hidden bg-background pt-24">
+      <div className="absolute left-[6%] top-28 h-14 w-14 rounded-2xl border-2 border-primary/20" />
+      <div className="absolute bottom-24 right-[8%] h-10 w-10 rounded-full border-2 border-accent/25" />
+      <div className="absolute right-[42%] top-36 h-3 w-20 rounded-full bg-accent/80" />
+
+      <div className="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-[1400px] items-center gap-12 px-5 py-16 lg:grid-cols-[1fr_0.9fr] lg:px-8">
+        <div className="max-w-3xl">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-4 py-2 text-sm font-bold text-primary shadow-sm">
+            <CheckCircle2 className="h-4 w-4" />
+            Youth-focused democratic leadership
+          </p>
+          <h1 className="font-heading text-4xl font-black leading-[1.08] text-foreground sm:text-5xl lg:text-[72px]">
+            Leadership Through Service
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-[1.8] text-muted-foreground">
+            Building a Stronger Bangladesh Through Youth Empowerment, Education,
+            and Democratic Values
+          </p>
+
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#vision"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-4 text-base font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+            >
+              Explore Vision
+              <ArrowRight className="h-5 w-5" />
+            </a>
+            <a
+              href="#about"
+              className="inline-flex items-center justify-center rounded-xl border border-primary bg-white px-7 py-4 text-base font-bold text-primary transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/5"
+            >
+              About Anik
+            </a>
+          </div>
+
+          <div className="mt-12 grid max-w-xl grid-cols-3 gap-4">
+            {[
+              ["12+", "Years of Service"],
+              ["80+", "Social Programs"],
+              ["35+", "Youth Projects"],
+            ].map(([value, label]) => (
+              <div
+                key={label}
+                className="rounded-2xl border border-border bg-white/90 p-4 shadow-sm"
+              >
+                <p className="text-2xl font-black text-accent">{value}</p>
+                <p className="mt-1 text-xs font-semibold leading-snug text-muted-foreground">
+                  {label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-5 text-center">
-        <h1 className="max-w-5xl font-heading text-4xl font-bold uppercase leading-tight tracking-[0.08em] text-foreground sm:text-6xl md:text-7xl">
-          {heroSlides[active].title}
-        </h1>
-        <span className="mt-6 inline-block border border-gold px-6 py-2 text-xs uppercase tracking-[0.3em] text-gold">
-          {heroSlides[active].subtitle}
-        </span>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-3">
-        {heroSlides.map((_, i) => (
-          <button
-            key={i}
-            aria-label={`Go to slide ${i + 1}`}
-            onClick={() => setActive(i)}
-            className={`h-1.5 rounded-full transition-all ${
-              i === active ? "w-8 bg-gold" : "w-2 bg-foreground/40"
-            }`}
+        <div className="relative mx-auto w-full max-w-xl lg:ml-auto">
+          <div className="absolute -inset-5 rounded-[2rem] border border-primary/10 bg-primary/5" />
+          <img
+            src={heroPortrait}
+            alt="Anisur Rahman Khandoker Anik"
+            width={1536}
+            height={2048}
+            loading="eager"
+            className="relative aspect-4/5 w-full rounded-2xl object-cover object-top shadow-2xl shadow-slate-900/15"
           />
-        ))}
+          <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 p-5 shadow-xl backdrop-blur">
+            <p className="text-sm font-bold uppercase text-primary">
+              Future-ready leadership
+            </p>
+            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+              Service, accountability and opportunity for the next generation.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

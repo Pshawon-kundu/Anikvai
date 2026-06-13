@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { Link } from "@tanstack/react-router";
 
 export function SiteLayout({
   children,
@@ -27,12 +27,19 @@ export function PageHeader({
   subtitle?: string;
 }) {
   return (
-    <section className="border-b border-border py-20 text-center md:py-28">
+    <section className="border-b border-border bg-secondary py-20 text-center md:py-28">
       <div className="mx-auto max-w-3xl px-5">
-        <h1 className="font-heading text-4xl uppercase tracking-[0.15em] text-foreground md:text-6xl">
+        <p className="mb-4 text-sm font-bold uppercase text-primary">
+          Official Portfolio
+        </p>
+        <h1 className="font-heading text-4xl font-black text-foreground md:text-6xl">
           {title}
         </h1>
-        {subtitle && <p className="mt-4 text-muted-foreground">{subtitle}</p>}
+        {subtitle && (
+          <p className="mt-4 text-lg leading-[1.8] text-muted-foreground">
+            {subtitle}
+          </p>
+        )}
       </div>
     </section>
   );
@@ -48,16 +55,16 @@ export function SectionHeading({
   linkTo?: string;
 }) {
   return (
-    <div className="mb-10 flex items-end justify-between gap-4 border-b border-border pb-4">
-      <h2 className="font-heading text-2xl uppercase tracking-[0.15em] text-foreground md:text-4xl">
+    <div className="mb-10 flex items-end justify-between gap-4 border-b border-border pb-5">
+      <h2 className="font-heading text-3xl font-black text-foreground md:text-5xl">
         {title}
       </h2>
       {link && linkTo && (
         <Link
           to={linkTo}
-          className="shrink-0 text-xs uppercase tracking-[0.2em] text-gold transition-opacity hover:opacity-70"
+          className="shrink-0 text-sm font-bold text-accent transition-colors hover:text-primary"
         >
-          {link} →
+          {link} -&gt;
         </Link>
       )}
     </div>

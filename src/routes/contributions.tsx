@@ -5,7 +5,7 @@ import { socialWork } from "@/lib/site-data";
 export const Route = createFileRoute("/contributions")({
   head: () => ({
     meta: [
-      { title: "Contributions — Anisur Rahman Khandoker Anik" },
+      { title: "Contributions - Anisur Rahman Khandoker Anik" },
       {
         name: "description",
         content:
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/contributions")({
       },
       {
         property: "og:title",
-        content: "Contributions — Anisur Rahman Khandoker Anik",
+        content: "Contributions - Anisur Rahman Khandoker Anik",
       },
       {
         property: "og:description",
