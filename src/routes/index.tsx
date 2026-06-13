@@ -60,9 +60,6 @@ function Index() {
           <div className="absolute inset-0 bg-linear-to-b from-white/20 via-black/10 to-black/88" />
 
           <div className="relative z-10 mx-auto flex min-h-[calc(100vh-100px)] max-w-[1400px] flex-col items-center justify-center px-5 text-center text-white sm:px-8 lg:px-10">
-            <p className="mb-5 [font-family:Georgia,serif] text-[14px] font-semibold uppercase tracking-[0.55em] text-white/75">
-              ANIK
-            </p>
             <h1 className="[font-family:Georgia,serif] text-[44px] font-bold uppercase leading-[1.16] tracking-[0.08em] text-white drop-shadow-[0_8px_20px_rgba(0,0,0,0.45)] sm:text-[68px] md:text-[86px] lg:text-[96px]">
               ANISUR RAHMAN
               <br />
@@ -70,7 +67,7 @@ function Index() {
             </h1>
             <a
               href="#commitment"
-              className="mt-10 border border-[#D8B756] px-8 py-3 text-[13px] font-semibold uppercase tracking-[0.5em] text-[#D8B756] transition-colors hover:bg-[#D8B756] hover:text-black sm:px-10 sm:text-[15px]"
+              className="mt-10 inline-flex items-center justify-center border border-[#d11f3a] bg-linear-to-r from-[#d11f3a] to-[#0a7a43] px-8 py-3 text-[13px] font-semibold uppercase tracking-[0.5em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.22)] transition-transform transition-shadow hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(0,0,0,0.28)] sm:px-10 sm:text-[15px]"
             >
               VISION FOR A BETTER TOMORROW
             </a>

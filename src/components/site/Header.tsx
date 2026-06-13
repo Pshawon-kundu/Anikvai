@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronDown, Globe2, Menu, X } from "lucide-react";
-import logoImage from "@/assests/Khaleda Ziya, Tarek Ziya, Ziaur Rahman Logo HD Photo PNG - বিএনপি লগো ফটো Top 20 pngTom - BNP Logo Photo -4.png";
+import logoImage from "@/assests/bnp c.jpeg";
 
 const navItems = [
   { label: "আমার অঙ্গীকার", href: "#commitment" },
@@ -24,21 +24,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#006A4E] text-white">
       <div className="mx-auto flex h-[100px] max-w-[1400px] items-center justify-between px-5 sm:px-8 xl:px-10">
-        <Link to="/" className="flex shrink-0 items-center gap-4 lg:flex-row-reverse lg:gap-5">
+        <Link to="/" className="flex shrink-0 items-center">
           <span className="flex h-[62px] w-[62px] overflow-hidden rounded-full bg-white p-1 shadow-sm">
             <img
               src={logoImage}
               alt="বিএনপি লোগো"
               className="h-full w-full rounded-full object-contain object-center"
             />
-          </span>
-          <span className="hidden text-left leading-tight sm:block lg:text-right">
-            <span className="block font-bengali text-[18px] font-extrabold tracking-[0.01em] sm:text-[20px] lg:text-[22px]">
-              আনিসুর রহমান
-            </span>
-            <span className="block font-bengali text-[18px] font-extrabold tracking-[0.01em] sm:text-[20px] lg:text-[22px]">
-              খন্দকার আনিক
-            </span>
           </span>
         </Link>
 
@@ -78,7 +70,13 @@ export function Header() {
       {open && (
         <div className="fixed inset-0 z-50 bg-[#006A4E] px-5 py-7 text-white lg:hidden">
           <div className="flex items-center justify-between">
-            <span className="font-bengali text-2xl font-extrabold">আনিক</span>
+            <span className="flex h-12 w-12 overflow-hidden rounded-full bg-white p-1 shadow-sm">
+              <img
+                src={logoImage}
+                alt="বিএনপি লোগো"
+                className="h-full w-full rounded-full object-contain object-center"
+              />
+            </span>
             <button
               type="button"
               aria-label="Close menu"
