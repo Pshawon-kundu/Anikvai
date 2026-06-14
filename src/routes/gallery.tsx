@@ -36,16 +36,19 @@ function GalleryPage() {
           {gallery.map((g) => (
             <div
               key={g.title}
-              className="group relative overflow-hidden rounded-sm"
+              className="group relative overflow-hidden rounded-sm bg-cover bg-top"
+              style={{ backgroundImage: `url(${g.image})` }}
             >
               <img
                 src={g.image}
                 alt={g.title}
                 width={1024}
                 height={768}
-                loading="lazy"
-                className="aspect-4/5 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110 sm:aspect-video"
+                loading="eager"
+                decoding="sync"
+                className="sr-only"
               />
+              <div className="aspect-4/5 w-full sm:aspect-video" />
               <div className="absolute inset-0 flex items-end bg-gradient-to-t from-background/90 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100">
                 <h2 className="font-heading text-xl text-foreground">
                   {g.title}

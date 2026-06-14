@@ -202,12 +202,13 @@ function Index() {
               {galleryImages.map((photo, index) => (
                 <figure
                   key={`${photo}-${index}`}
-                  className="h-72 overflow-hidden rounded-sm bg-[#F5F5F5] shadow-[0_10px_24px_rgba(0,0,0,0.07)] sm:h-80 lg:h-72 xl:h-80"
+                  className="h-72 overflow-hidden rounded-sm bg-[#F5F5F5] bg-cover bg-center shadow-[0_10px_24px_rgba(0,0,0,0.07)] sm:h-80 lg:h-72 xl:h-80"
+                  style={{ backgroundImage: `url(${photo})` }}
                 >
                   <img
                     src={photo}
                     alt={`Anik gallery ${index + 1}`}
-                    className="h-full w-full object-cover"
+                    className="sr-only"
                     loading="eager"
                     decoding="sync"
                     fetchPriority={index < 4 ? "high" : "auto"}
