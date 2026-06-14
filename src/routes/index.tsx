@@ -208,7 +208,9 @@ function Index() {
                     src={photo}
                     alt={`Anik gallery ${index + 1}`}
                     className="h-full w-full object-cover"
-                    loading="lazy"
+                    loading="eager"
+                    decoding="sync"
+                    fetchPriority={index < 4 ? "high" : "auto"}
                   />
                 </figure>
               ))}
