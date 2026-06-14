@@ -1,4 +1,4 @@
-import logoImage from "@/assests/ak8.jpeg";
+import logoImage from "@/assests/ak7.jpg";
 
 const footerLinks = [
   { label: "আমার অঙ্গীকার", href: "#commitment" },
@@ -11,10 +11,10 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="bg-[#006A4E] text-white">
-      <div className="mx-auto flex min-h-[420px] max-w-[1400px] flex-col justify-center px-5 py-14 sm:px-8 lg:px-10 lg:py-0">
+      <div className="mx-auto flex min-h-105 max-w-350 flex-col justify-center px-5 py-14 sm:px-8 lg:px-10 lg:py-0">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr_0.8fr]">
-          <section className="max-w-[360px]">
-            <div className="mb-8 h-px w-[175px] bg-white" />
+          <section className="max-w-90">
+            <div className="mb-8 h-px w-43.75 bg-white" />
             <h2 className="font-bengali text-[34px] font-extrabold leading-tight">
               আনিসুর রহমান
               <br />
@@ -27,7 +27,7 @@ export function Footer() {
           </section>
 
           <section className="flex justify-center">
-            <div className="flex h-[230px] w-[230px] items-center justify-center rounded-full bg-white p-4 shadow-sm sm:h-[270px] sm:w-[270px]">
+            <div className="flex h-57.5 w-57.5 items-center justify-center rounded-full bg-white p-4 shadow-sm sm:h-67.5 sm:w-67.5">
               <img
                 src={logoImage}
                 alt="Anisur Rahman Khandoker Anik"

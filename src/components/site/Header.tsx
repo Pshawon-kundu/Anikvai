@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronDown, Globe2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logoImage from "@/assests/bnp c.jpeg";
+import rightImage from "@/assests/download.jpg";
 
 const navItems = [
   { label: "আমার অঙ্গীকার", href: "#commitment" },
@@ -46,15 +47,14 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
-          <button
-            type="button"
-            className="inline-flex h-[46px] items-center gap-2 rounded-full bg-white px-5 font-bengali text-[15px] font-bold text-[#006A4E] shadow-[0_7px_18px_rgba(0,0,0,0.16)]"
-          >
-            <Globe2 className="h-4 w-4" />
-            বাংলা
-            <ChevronDown className="h-4 w-4" />
-          </button>
+        <div className="hidden lg:flex">
+          <span className="flex h-[46px] w-[46px] overflow-hidden rounded-full bg-white p-1 shadow-[0_7px_18px_rgba(0,0,0,0.16)]">
+            <img
+              src={rightImage}
+              alt="Header accent"
+              className="h-full w-full rounded-full object-cover object-center"
+            />
+          </span>
         </div>
 
         <button
