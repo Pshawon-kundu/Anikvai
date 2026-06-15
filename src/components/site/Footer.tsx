@@ -11,7 +11,6 @@ const footerLinks = [
 ] as const;
 
 const contactItems = [
-  { icon: Phone, label: "+880 1700-000000", href: "tel:+8801700000000" },
   { icon: Mail, label: "Send email", href: EMAIL_URL },
   { icon: MapPin, label: "ঢাকা, বাংলাদেশ", href: null },
 ] as const;
