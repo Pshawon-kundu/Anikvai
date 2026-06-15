@@ -24,9 +24,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#006A4E] text-white">
-      <div className="mx-auto flex h-[100px] max-w-[1400px] items-center justify-between px-5 sm:px-8 xl:px-10">
+      <div className="mx-auto flex h-[86px] max-w-[1400px] items-center justify-between px-5 sm:h-[100px] sm:px-8 xl:px-10">
         <Link to="/" className="flex shrink-0 items-center">
-          <span className="flex h-[62px] w-[62px] overflow-hidden rounded-full bg-white p-1 shadow-sm">
+          <span className="flex h-[56px] w-[56px] overflow-hidden rounded-full bg-white p-1 shadow-sm sm:h-[62px] sm:w-[62px]">
             <img
               src={logoImage}
               alt="বিএনপি লোগো"

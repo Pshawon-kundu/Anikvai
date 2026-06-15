@@ -99,24 +99,24 @@ function Index() {
     <div className="min-h-screen bg-[#F5F5F5] font-bengali text-[#1f2933]">
       <Header />
       <main id="content">
-        <section className="relative min-h-[calc(100vh-100px)] overflow-hidden bg-black">
+        <section className="relative min-h-[calc(100svh-86px)] overflow-hidden bg-black sm:min-h-[calc(100vh-100px)]">
           <img
             src={photoThree}
             alt="Anisur Rahman Khandoker Anik"
-            className="absolute inset-0 h-full w-full object-cover object-[50%_55%]"
+            className="absolute left-1/2 top-[-22%] h-[132%] w-auto max-w-none -translate-x-1/2 object-cover object-center sm:inset-0 sm:h-full sm:w-full sm:translate-x-0 sm:object-[50%_55%]"
           />
-          <div className="absolute inset-0 bg-black/48" />
-          <div className="absolute inset-0 bg-linear-to-b from-white/20 via-black/10 to-black/88" />
+          <div className="absolute inset-0 bg-black/42 sm:bg-black/48" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/10 to-black/86 sm:from-white/20 sm:via-black/10 sm:to-black/88" />
 
-          <div className="relative z-10 mx-auto flex min-h-[calc(100vh-100px)] max-w-350 flex-col items-center justify-center px-5 pb-12 text-center text-white sm:px-8 sm:pb-16 lg:px-10 lg:pb-20">
-            <h1 className="font-[Georgia,serif] text-[44px] font-bold uppercase leading-[1.16] tracking-[0.08em] text-white drop-shadow-[0_8px_20px_rgba(0,0,0,0.45)] sm:text-[68px] md:text-[86px] lg:text-[96px]">
+          <div className="relative z-10 mx-auto flex min-h-[calc(100svh-86px)] max-w-350 flex-col items-center justify-start px-4 pb-8 pt-[13vh] text-center text-white sm:min-h-[calc(100vh-100px)] sm:justify-center sm:px-8 sm:pb-16 sm:pt-0 lg:px-10 lg:pb-20">
+            <h1 className="max-w-[22rem] font-[Georgia,serif] text-[36px] font-bold uppercase leading-[1.12] tracking-[0.075em] text-white drop-shadow-[0_8px_20px_rgba(0,0,0,0.55)] min-[390px]:text-[39px] sm:max-w-none sm:text-[68px] sm:leading-[1.16] sm:tracking-[0.08em] md:text-[86px] lg:text-[96px]">
               ANISUR RAHMAN
               <br />
               KHANDOKER ANIK
             </h1>
             <a
               href="#commitment"
-              className="mt-5 max-w-[92vw] text-center font-[Georgia,serif] text-[15px] font-bold uppercase leading-[1.55] tracking-[0.28em] text-[#d11f3a] drop-shadow-[0_3px_8px_rgba(0,0,0,0.75)] transition-all hover:-translate-y-0.5 hover:text-[#ff2b49] sm:mt-6 sm:text-[19px] sm:tracking-[0.42em]"
+              className="mt-5 max-w-[19rem] rounded-[8px] border border-white/55 bg-black/52 px-5 py-3 text-center font-[Georgia,serif] text-[12px] font-bold uppercase leading-[1.6] tracking-[0.2em] text-white shadow-[0_14px_36px_rgba(0,0,0,0.45)] backdrop-blur-md transition-all [text-shadow:0_2px_8px_rgba(0,0,0,0.75)] hover:-translate-y-0.5 hover:border-white/75 hover:bg-black/62 sm:mt-6 sm:max-w-[92vw] sm:px-7 sm:text-[19px] sm:tracking-[0.34em]"
             >
               VISION FOR A BETTER TOMORROW
             </a>
