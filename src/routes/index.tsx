@@ -15,13 +15,13 @@ import photoFive from "@/assests/ak6.jpeg";
 import photoSix from "@/assests/ak7.jpg";
 import photoSeven from "@/assests/ak8.jpeg";
 import photoEight from "@/assests/ak9.jpg";
-import photoNine from "@/assests/download.jpg";
+import photoNine from "@/assests/a13.jpeg";
 import photoTwelve from "@/assests/WhatsApp Image 2026-06-14 at 1.56.23 AM.jpeg";
 import videoThumbOne from "@/assests/ak.jpg";
 import videoThumbTwo from "@/assests/ak3.jpg";
 import videoThumbThree from "@/assests/ak5.jpeg";
 import videoThumbFour from "@/assests/ak8.jpeg";
-import videoThumbFive from "@/assests/download.jpg";
+import videoThumbFive from "@/assests/a11.jpeg";
 
 const galleryImages = [
   photoOne,
