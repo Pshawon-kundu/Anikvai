@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
-import { aboutBioLong } from "@/lib/site-data";
+import { aboutBioLong, leadershipCredentials } from "@/lib/site-data";
 import aboutImg from "@/assests/ak8.jpeg";
 
 export const Route = createFileRoute("/about")({
@@ -42,6 +42,21 @@ function AboutPage() {
               {p}
             </p>
           ))}
+          <div className="pt-4">
+            <h2 className="font-bengali text-2xl font-extrabold text-[#1f2933]">
+              পরিচিতি
+            </h2>
+            <ul className="mt-5 space-y-3">
+              {leadershipCredentials.map((item) => (
+                <li
+                  key={item}
+                  className="border-l-4 border-[#006A4E] bg-[#F5F5F5] px-5 py-4 font-bengali text-[18px] font-bold leading-[1.75] text-[#1f2933]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </SiteLayout>
