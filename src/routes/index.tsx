@@ -13,6 +13,7 @@ import photoSix from "@/assests/ak7.jpg";
 import photoSeven from "@/assests/ak8.jpeg";
 import photoEight from "@/assests/ak9.jpg";
 import photoNine from "@/assests/download.jpg";
+import photoTwelve from "@/assests/WhatsApp Image 2026-06-14 at 1.56.23 AM.jpeg";
 import photoTen from "@/assests/WhatsApp Image 2026-06-14 at 2.20.22 AM.jpeg";
 import photoEleven from "@/assests/WhatsApp Image 2026-06-14 at 2.21.51 AM.jpeg";
 import videoThumbOne from "@/assests/ak.jpg";
@@ -33,6 +34,7 @@ const galleryImages = [
   photoNine,
   photoTen,
   photoEleven,
+  photoTwelve,
 ] as const;
 
 const marqueeNews = [...newsItems, ...newsItems];
@@ -114,7 +116,7 @@ function Index() {
             </h1>
             <a
               href="#commitment"
-              className="mt-8 inline-flex items-center justify-center border border-[#d11f3a] bg-linear-to-r from-[#d11f3a] to-[#0a7a43] px-8 py-3 text-[13px] font-semibold uppercase tracking-[0.5em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.22)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(0,0,0,0.28)] sm:px-10 sm:text-[15px]"
+              className="mt-5 max-w-[92vw] text-center font-[Georgia,serif] text-[15px] font-bold uppercase leading-[1.55] tracking-[0.28em] text-[#d11f3a] drop-shadow-[0_3px_8px_rgba(0,0,0,0.75)] transition-all hover:-translate-y-0.5 hover:text-[#ff2b49] sm:mt-6 sm:text-[19px] sm:tracking-[0.42em]"
             >
               VISION FOR A BETTER TOMORROW
             </a>
