@@ -5,6 +5,9 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { newsItems } from "@/lib/site-data";
 import photoOne from "@/assests/ak.jpg";
+import heroMobileOne from "@/assests/a11.jpeg";
+import heroMobileThree from "@/assests/a12.jpeg";
+import heroMobileFour from "@/assests/a13.jpeg";
 import photoTwo from "@/assests/ak8.jpeg";
 import photoThree from "@/assests/ak3.jpg";
 import photoFour from "@/assests/ak5.jpeg";
@@ -14,8 +17,6 @@ import photoSeven from "@/assests/ak8.jpeg";
 import photoEight from "@/assests/ak9.jpg";
 import photoNine from "@/assests/download.jpg";
 import photoTwelve from "@/assests/WhatsApp Image 2026-06-14 at 1.56.23 AM.jpeg";
-import photoTen from "@/assests/WhatsApp Image 2026-06-14 at 2.20.22 AM.jpeg";
-import photoEleven from "@/assests/WhatsApp Image 2026-06-14 at 2.21.51 AM.jpeg";
 import videoThumbOne from "@/assests/ak.jpg";
 import videoThumbTwo from "@/assests/ak3.jpg";
 import videoThumbThree from "@/assests/ak5.jpeg";
@@ -32,12 +33,17 @@ const galleryImages = [
   photoSeven,
   photoEight,
   photoNine,
-  photoTen,
-  photoEleven,
   photoTwelve,
 ] as const;
 
 const marqueeNews = [...newsItems, ...newsItems];
+
+const mobileHeroImages = [
+  heroMobileOne,
+  photoThree,
+  heroMobileThree,
+  heroMobileFour,
+] as const;
 
 const videoLinks = [
   {
@@ -100,23 +106,34 @@ function Index() {
       <Header />
       <main id="content">
         <section className="relative min-h-[calc(100svh-86px)] overflow-hidden bg-black sm:min-h-[calc(100vh-100px)]">
+          <div className="absolute inset-0 sm:hidden">
+            {mobileHeroImages.map((image, index) => (
+              <img
+                key={image}
+                src={image}
+                alt="Anisur Rahman Khandoker Anik"
+                className="mobile-hero-slide absolute inset-0 h-full w-full object-cover object-center"
+                style={{ animationDelay: `${index * 4}s` }}
+              />
+            ))}
+          </div>
           <img
             src={photoThree}
             alt="Anisur Rahman Khandoker Anik"
-            className="absolute left-1/2 top-[-22%] h-[132%] w-auto max-w-none -translate-x-1/2 object-cover object-center sm:inset-0 sm:h-full sm:w-full sm:translate-x-0 sm:object-[50%_55%]"
+            className="absolute left-1/2 top-[-22%] hidden h-[132%] w-auto max-w-none -translate-x-1/2 object-cover object-center sm:inset-0 sm:block sm:h-full sm:w-full sm:translate-x-0 sm:object-[50%_55%]"
           />
           <div className="absolute inset-0 bg-black/42 sm:bg-black/48" />
           <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/10 to-black/86 sm:from-white/20 sm:via-black/10 sm:to-black/88" />
 
-          <div className="relative z-10 mx-auto flex min-h-[calc(100svh-86px)] max-w-350 flex-col items-center justify-start px-4 pb-8 pt-[13vh] text-center text-white sm:min-h-[calc(100vh-100px)] sm:justify-center sm:px-8 sm:pb-16 sm:pt-0 lg:px-10 lg:pb-20">
-            <h1 className="max-w-[22rem] font-[Georgia,serif] text-[36px] font-bold uppercase leading-[1.12] tracking-[0.075em] text-white drop-shadow-[0_8px_20px_rgba(0,0,0,0.55)] min-[390px]:text-[39px] sm:max-w-none sm:text-[68px] sm:leading-[1.16] sm:tracking-[0.08em] md:text-[86px] lg:text-[96px]">
+          <div className="relative z-10 mx-auto flex min-h-[calc(100svh-86px)] max-w-350 flex-col items-center px-4 pb-[9vh] pt-[13vh] text-center text-white sm:min-h-[calc(100vh-100px)] sm:justify-center sm:px-8 sm:pb-16 sm:pt-0 lg:px-10 lg:pb-20">
+            <h1 className="w-full max-w-none whitespace-nowrap font-[Georgia,serif] text-[31px] font-bold uppercase leading-[1.12] [letter-spacing:0] text-white drop-shadow-[0_8px_20px_rgba(0,0,0,0.55)] min-[390px]:text-[34px] sm:w-auto sm:text-[68px] sm:leading-[1.16] sm:tracking-[0.08em] md:text-[86px] lg:text-[96px]">
               ANISUR RAHMAN
               <br />
               KHANDOKER ANIK
             </h1>
             <a
               href="#commitment"
-              className="mt-5 max-w-[19rem] rounded-[8px] border border-white/55 bg-black/52 px-5 py-3 text-center font-[Georgia,serif] text-[12px] font-bold uppercase leading-[1.6] tracking-[0.2em] text-white shadow-[0_14px_36px_rgba(0,0,0,0.45)] backdrop-blur-md transition-all [text-shadow:0_2px_8px_rgba(0,0,0,0.75)] hover:-translate-y-0.5 hover:border-white/75 hover:bg-black/62 sm:mt-6 sm:max-w-[92vw] sm:px-7 sm:text-[19px] sm:tracking-[0.34em]"
+              className="mt-auto max-w-[19rem] rounded-[8px] border border-white/55 bg-black/52 px-5 py-3 text-center font-[Georgia,serif] text-[12px] font-bold uppercase leading-[1.6] tracking-[0.16em] text-white shadow-[0_14px_36px_rgba(0,0,0,0.45)] backdrop-blur-md transition-all [text-shadow:0_2px_8px_rgba(0,0,0,0.75)] hover:-translate-y-0.5 hover:border-white/75 hover:bg-black/62 sm:mt-6 sm:max-w-[92vw] sm:px-7 sm:text-[19px] sm:tracking-[0.34em]"
             >
               VISION FOR A BETTER TOMORROW
             </a>

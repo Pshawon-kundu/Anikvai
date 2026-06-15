@@ -203,7 +203,41 @@
   animation-play-state: paused;
 }
 
+@keyframes mobile-hero-swap {
+  0%,
+  22% {
+    opacity: 1;
+  }
+
+  28%,
+  94% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.mobile-hero-slide {
+  animation: mobile-hero-swap 16s ease-in-out infinite;
+  opacity: 0;
+  will-change: opacity;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .mobile-hero-slide {
+    animation: none;
+  }
+
+  .mobile-hero-slide:not(:first-child) {
+    opacity: 0;
+  }
+
+  .mobile-hero-slide:first-child {
+    opacity: 1;
+  }
+
   .news-marquee-track {
     animation: none;
     transform: none;
