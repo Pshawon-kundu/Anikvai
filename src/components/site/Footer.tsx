@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone, Youtube } from "lucide-react";
-import { EMAIL_URL, FACEBOOK_URL } from "@/lib/site-data";
+import { EMAIL_URL, FACEBOOK_URL, leadershipCredentials } from "@/lib/site-data";
 
 const footerLinks = [
   { label: "About", href: "/about" },
@@ -37,6 +37,16 @@ export function Footer() {
               মানুষের জন্য কাজ, উন্নয়নের জন্য অঙ্গীকার। একটি আধুনিক, স্বচ্ছ
               এবং মানবিক নেতৃত্বের গতিশীল প্রত্যয়ে নিরলস কাজ করে যাচ্ছি।
             </p>
+            <ul className="mt-7 max-w-145 space-y-3 font-bengali">
+              {leadershipCredentials.map((item) => (
+                <li
+                  key={item}
+                  className="border-l-4 border-[#0b6049] bg-white/45 px-4 py-3 text-[16px] font-bold leading-[1.65] text-[#064735] shadow-[0_6px_18px_rgba(6,71,53,0.05)]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
 
             <div className="mt-8 flex items-center gap-4">
               <a
