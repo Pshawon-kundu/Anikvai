@@ -11,7 +11,9 @@ export type NewsItem = {
 };
 
 export const FULL_NAME = "Anisur Rahman Khandoker Anik";
-export const FACEBOOK_URL = "https://www.facebook.com/anikhasandu/";
+export const CONTACT_EMAIL = "anikhasandu@gmail.com";
+export const EMAIL_URL = `mailto:${CONTACT_EMAIL}`;
+export const FACEBOOK_URL = "https://www.facebook.com/anikhasandu";
 
 export const heroSlides = [
   {

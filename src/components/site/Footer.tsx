@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone, Youtube } from "lucide-react";
-import { FACEBOOK_URL } from "@/lib/site-data";
+import { EMAIL_URL, FACEBOOK_URL } from "@/lib/site-data";
 
 const footerLinks = [
   { label: "About", href: "/about" },
@@ -7,12 +7,12 @@ const footerLinks = [
   { label: "Photos", href: "/#photo-gallery" },
   { label: "Videos", href: "/#video" },
   { label: "News", href: "/#news" },
-  { label: "Contact", href: "mailto:anik@example.com" },
+  { label: "Contact", href: EMAIL_URL },
 ] as const;
 
 const contactItems = [
   { icon: Phone, label: "+880 1700-000000", href: "tel:+8801700000000" },
-  { icon: Mail, label: "anik@example.com", href: "mailto:anik@example.com" },
+  { icon: Mail, label: "Send email", href: EMAIL_URL },
   { icon: MapPin, label: "ঢাকা, বাংলাদেশ", href: null },
 ] as const;
 
