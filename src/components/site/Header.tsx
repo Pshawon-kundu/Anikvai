@@ -5,7 +5,6 @@ import logoImage from "@/assests/bnp c.jpeg";
 import rightImage from "@/assests/a11.jpeg";
 
 const navItems = [
-  { label: "পরিচিতি", href: "#profile" },
   { label: "আমার অঙ্গীকার", href: "#commitment" },
   { label: "নিউজ", href: "#news" },
   { label: "ভিডিও", href: "#video" },

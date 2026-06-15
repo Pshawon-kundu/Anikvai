@@ -3,7 +3,7 @@ import { Play } from "lucide-react";
 import { NewsCard } from "@/components/site/NewsCard";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
-import { leadershipCredentials, newsItems } from "@/lib/site-data";
+import { newsItems } from "@/lib/site-data";
 import photoOne from "@/assests/ak.jpg";
 import heroMobileOne from "@/assests/a11.jpeg";
 import heroMobileThree from "@/assests/a12.jpeg";
@@ -137,24 +137,6 @@ function Index() {
             >
               VISION FOR A BETTER TOMORROW
             </a>
-          </div>
-        </section>
-
-        <section className="bg-white">
-          <div className="mx-auto max-w-350 px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
-            <SectionHeading id="profile" title="পরিচিতি" />
-            <div className="mt-9 grid gap-4 md:grid-cols-2">
-              {leadershipCredentials.map((item) => (
-                <article
-                  key={item}
-                  className="border-l-4 border-[#006A4E] bg-[#F5F5F5] px-6 py-5 shadow-[0_10px_24px_rgba(0,0,0,0.05)]"
-                >
-                  <p className="font-bengali text-[19px] font-bold leading-[1.8] text-[#1f2933]">
-                    {item}
-                  </p>
-                </article>
-              ))}
-            </div>
           </div>
         </section>
 
