@@ -1,8 +1,8 @@
-//import { useEffect, useState } from "react";
-//import { Link } from "@tanstack/react-router";
-//import { Menu, X } from "lucide-react";
-//import logoImage from "@/assests/bnp c.jpeg";
-//import rightImage from "@/assests/a11.jpeg";
+import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
+import { Menu, X } from "lucide-react";
+import logoImage from "@/assests/bnp c.jpeg";
+import rightImage from "@/assests/a11.jpeg";
 
 const navItems = [
   { label: "আমার অঙ্গীকার", href: "#commitment" },
